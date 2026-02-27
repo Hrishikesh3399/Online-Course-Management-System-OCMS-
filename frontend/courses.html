@@ -1,0 +1,63 @@
+<!-- frontend/courses.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCMS - Course Catalog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(16, 185, 129, 0.1));
+            border-radius: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">OCMS</div>
+        <div class="nav-links" id="navLinksAuth">
+            <!-- Rendered by JS dynamically based on Login Status -->
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="page-header">
+            <h1 class="page-title">Explore Courses</h1>
+            <p class="page-subtitle">Master new skills with our expert-led courses. Find your path to success today.</p>
+        </div>
+
+        <div id="alertBox" class="alert"></div>
+
+        <div id="loading" style="text-align: center; color: var(--text-secondary);">Loading catalog...</div>
+        <div id="coursesGrid" class="grid-cards" style="display: none;">
+            <!-- Rendered dynamically -->
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+
+</html>
